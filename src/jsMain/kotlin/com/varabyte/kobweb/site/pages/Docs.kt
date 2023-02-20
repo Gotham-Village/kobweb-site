@@ -2,23 +2,21 @@ package com.varabyte.kobweb.site.pages
 
 import androidx.compose.runtime.*
 import com.varabyte.kobweb.compose.css.FontWeight
-import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.css.WhiteSpace
 import com.varabyte.kobweb.compose.foundation.layout.Column
-import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.*
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.text.SpanText
-import com.varabyte.kobweb.site.components.layouts.PageLayout
+import com.varabyte.kobweb.site.components.layouts.DocsLayout
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 
 @Page
 @Composable
 fun DocsPage() {
-    PageLayout("Docs") {
+    DocsLayout {
         Column(
             modifier = Modifier.fillMaxSize().margin(4.em),
             horizontalAlignment = Alignment.CenterHorizontally
