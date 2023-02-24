@@ -13,7 +13,9 @@ import com.varabyte.kobweb.silk.components.icons.fa.FaGithub
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.colors.rememberColorMode
 import com.varabyte.kobweb.site.components.style.MutedSpanTextVariant
+import com.varabyte.kobweb.site.components.style.SiteTextSize
 import com.varabyte.kobweb.site.components.style.boxShadow
+import com.varabyte.kobweb.site.components.style.siteText
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import com.varabyte.kobweb.silk.components.navigation.Link as SilkLink
@@ -60,7 +62,7 @@ fun Footer(modifier: Modifier = Modifier) {
             Logo()
             SpanText(
                 "Copyright © 2023 Varabyte. All rights reserved.",
-                Modifier.fontSize(0.75.em).textAlign(TextAlign.Center),
+                Modifier.siteText(SiteTextSize.TINY).textAlign(TextAlign.Center),
                 MutedSpanTextVariant
             )
         }

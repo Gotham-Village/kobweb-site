@@ -99,7 +99,7 @@ private val SITE_LISTING = buildList {
         Category(
             "guides",
             Subcategory(
-                "Getting Started",
+                "First Steps",
                 Article("gettingkobweb")
             ),
         )

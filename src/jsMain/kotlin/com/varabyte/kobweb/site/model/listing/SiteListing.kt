@@ -8,7 +8,7 @@ val SITE_LISTING = buildList {
          "guides",
          "Guides",
          Subcategory(
-            "Getting Started",
+            "First Steps",
             Article("gettingkobweb", "Getting Kobweb"),
          ),
       )

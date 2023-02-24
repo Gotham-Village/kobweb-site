@@ -59,7 +59,7 @@ fun NavHeader() {
     var colorMode by rememberColorMode()
     Box(NavHeaderStyle.toModifier(), contentAlignment = Alignment.Center) {
         Row(
-            Modifier.fillMaxWidth(90.percent).margin(1.em),
+            Modifier.fillMaxWidth(90.percent).margin(topBottom = 1.em),
             verticalAlignment = Alignment.CenterVertically
         ) {
             HomeLogo()

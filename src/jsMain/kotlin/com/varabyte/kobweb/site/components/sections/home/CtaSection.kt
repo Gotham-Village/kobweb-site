@@ -24,7 +24,9 @@ import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.SilkTheme
 import com.varabyte.kobweb.silk.theme.colors.rememberColorMode
 import com.varabyte.kobweb.site.components.style.MutedSpanTextVariant
+import com.varabyte.kobweb.site.components.style.SiteTextSize
 import com.varabyte.kobweb.site.components.style.boxShadow
+import com.varabyte.kobweb.site.components.style.siteText
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.px
@@ -60,12 +62,12 @@ private fun CtaGridItem(
                 content()
                 SpanText(
                     text,
-                    Modifier.fontSize(1.25.cssRem).textAlign(TextAlign.Center)
+                    Modifier.siteText(SiteTextSize.NORMAL).textAlign(TextAlign.Center)
                 )
                 SpanText(
                     subText,
                     Modifier
-                        .lineHeight(1.5)
+                        .siteText(SiteTextSize.NORMAL)
                         .margin(top = 1.cssRem, bottom = 1.cssRem)
                         .textAlign(TextAlign.Center),
                     MutedSpanTextVariant
