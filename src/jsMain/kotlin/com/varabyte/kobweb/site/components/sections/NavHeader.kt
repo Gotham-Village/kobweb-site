@@ -11,6 +11,7 @@ import com.varabyte.kobweb.navigation.Anchor
 import com.varabyte.kobweb.silk.components.icons.fa.*
 import com.varabyte.kobweb.silk.components.overlay.Tooltip
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
+import com.varabyte.kobweb.silk.components.style.common.SmoothColorStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import com.varabyte.kobweb.silk.theme.colors.rememberColorMode
@@ -19,7 +20,7 @@ import com.varabyte.kobweb.site.components.widgets.*
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Img
 
-val NavHeaderStyle by ComponentStyle {
+val NavHeaderStyle by ComponentStyle(extraModifiers = { SmoothColorStyle.toModifier() }) {
     base {
         Modifier
             .fillMaxWidth()

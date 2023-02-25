@@ -8,7 +8,6 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.App
 import com.varabyte.kobweb.silk.SilkApp
-import com.varabyte.kobweb.silk.components.layout.AnimatedColorSurfaceVariant
 import com.varabyte.kobweb.silk.components.layout.Surface
 import com.varabyte.kobweb.silk.components.style.common.SmoothColorStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
