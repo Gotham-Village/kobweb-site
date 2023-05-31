@@ -2,6 +2,7 @@ package com.varabyte.kobweb.site.components.sections.home
 
 import androidx.compose.runtime.*
 import com.varabyte.kobweb.compose.css.TextAlign
+import com.varabyte.kobweb.compose.dom.ElementTarget
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -17,6 +18,7 @@ import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.breakpoint.displayIf
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.navigation.Link
+import com.varabyte.kobweb.silk.components.overlay.Tooltip
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
@@ -116,6 +118,7 @@ fun HeroSection() {
                 LinkButton("https://github.com/varabyte/kobweb", HeroButton.toModifier(), "Github") {
                     FaGithub(Modifier.margin(right = 8.px))
                 }
+                Tooltip(ElementTarget.PreviousSibling, "Kobweb source on GitHub")
             }
 
             Column(Modifier.margin(top = 32.px, bottom = 32.px).displayIf(Breakpoint.MD), horizontalAlignment = Alignment.CenterHorizontally) {
