@@ -3,4 +3,4 @@ root: .components.layouts.DocsLayout
 title: Getting Kobweb
 ---
 
-Placeholder
+Placeholder (getting kobweb)

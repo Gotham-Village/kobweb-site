@@ -3,4 +3,4 @@ root: .components.layouts.DocsLayout
 title: Button
 ---
 
-Placeholder
+Placeholder (button)
