@@ -28,7 +28,7 @@ import com.varabyte.kobweb.site.components.style.MutedSpanTextVariant
 import com.varabyte.kobweb.site.components.style.SiteTextSize
 import com.varabyte.kobweb.site.components.style.siteText
 import com.varabyte.kobweb.site.components.widgets.GradientBox
-import com.varabyte.kobweb.site.components.widgets.KotlinCode
+import com.varabyte.kobweb.site.components.widgets.code.CodeBlock
 import com.varabyte.kobweb.site.components.widgets.LinkButton
 import com.varabyte.kobweb.site.components.widgets.Section
 import kotlinx.browser.window
@@ -126,17 +126,7 @@ fun HeroSection() {
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 HeroExample(Modifier.fillMaxWidth().borderRadius(12.px))
-                KotlinCode(
-                    // Set the color explicitly to opt-out of color mode for this section, which will always be on a grey
-                    // background
-                    modifier = Modifier
-                        // Choose a background color that's dark-ish but not as dark as the hero example itself, so it
-                        // stands out
-                        .color(Colors.White)
-                        .lineHeight(1.5.cssRem)
-                        .padding(0.75.cssRem)
-                        .background(ColorMode.DARK)
-                        .borderRadius(12.px),
+                CodeBlock(
                     code = """
                         @Page
                         @Composable
@@ -165,7 +155,8 @@ fun HeroSection() {
                             }
                           }
                         }
-                    """.trimIndent()
+                    """.trimIndent(),
+                    lang = "kotlin"
                 )
             }
         }
