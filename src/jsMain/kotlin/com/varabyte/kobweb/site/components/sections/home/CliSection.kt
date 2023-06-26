@@ -8,7 +8,7 @@ import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.silk.components.layout.breakpoint.displayIf
+import com.varabyte.kobweb.silk.components.layout.breakpoint.displayIfAtLeast
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.site.components.style.MutedSpanTextVariant
@@ -23,7 +23,7 @@ import org.jetbrains.compose.web.dom.*
  */
 @Composable
 fun CliSection() {
-    Section(Modifier.displayIf(Breakpoint.MD)) {
+    Section(Modifier.displayIfAtLeast(Breakpoint.MD)) {
         H2 {
             Text("Kobweb CLI")
         }
