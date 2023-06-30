@@ -1,6 +1,6 @@
 package com.varabyte.kobweb.site.components.sections.home
 
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.css.height
 import com.varabyte.kobweb.compose.css.width
@@ -15,8 +15,12 @@ import com.varabyte.kobweb.site.components.style.MutedSpanTextVariant
 import com.varabyte.kobweb.site.components.style.SiteTextSize
 import com.varabyte.kobweb.site.components.style.siteText
 import com.varabyte.kobweb.site.components.widgets.Section
-import org.jetbrains.compose.web.css.*
-import org.jetbrains.compose.web.dom.*
+import org.jetbrains.compose.web.css.cssRem
+import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.dom.H2
+import org.jetbrains.compose.web.dom.Source
+import org.jetbrains.compose.web.dom.Text
+import org.jetbrains.compose.web.dom.Video
 
 /**
  * A section that demonstrates what the Kobweb CLI behavior looks like.

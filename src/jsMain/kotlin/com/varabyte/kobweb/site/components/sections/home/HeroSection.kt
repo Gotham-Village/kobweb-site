@@ -121,7 +121,10 @@ fun HeroSection() {
                 Tooltip(ElementTarget.PreviousSibling, "Kobweb source on GitHub")
             }
 
-            Column(Modifier.margin(top = 32.px, bottom = 32.px).displayIfAtLeast(Breakpoint.MD), horizontalAlignment = Alignment.CenterHorizontally) {
+            Column(
+                Modifier.margin(top = 32.px, bottom = 32.px).displayIfAtLeast(Breakpoint.MD),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
                 HeroExample(Modifier.fillMaxWidth().borderRadius(12.px))
                 KotlinCode(
                     // Set the color explicitly to opt-out of color mode for this section, which will always be on a grey
