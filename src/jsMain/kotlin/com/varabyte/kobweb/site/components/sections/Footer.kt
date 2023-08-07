@@ -1,6 +1,7 @@
 package com.varabyte.kobweb.site.components.sections
 
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -11,13 +12,13 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.navigation.Anchor
 import com.varabyte.kobweb.silk.components.icons.fa.FaGithub
 import com.varabyte.kobweb.silk.components.text.SpanText
-import com.varabyte.kobweb.silk.theme.colors.rememberColorMode
+import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import com.varabyte.kobweb.site.components.style.MutedSpanTextVariant
 import com.varabyte.kobweb.site.components.style.SiteTextSize
 import com.varabyte.kobweb.site.components.style.boxShadow
 import com.varabyte.kobweb.site.components.style.siteText
 import org.jetbrains.compose.web.css.*
-import org.jetbrains.compose.web.dom.*
+import org.jetbrains.compose.web.dom.Img
 import com.varabyte.kobweb.silk.components.navigation.Link as SilkLink
 
 @Composable
@@ -49,7 +50,7 @@ private fun Logo() {
 
 @Composable
 fun Footer(modifier: Modifier = Modifier) {
-    val colorMode by rememberColorMode()
+    val colorMode by ColorMode.currentState
     Box(
         Modifier.fillMaxWidth().minHeight(200.px).boxShadow(colorMode).then(modifier),
         contentAlignment = Alignment.Center

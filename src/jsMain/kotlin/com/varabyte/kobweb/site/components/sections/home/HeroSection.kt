@@ -28,9 +28,9 @@ import com.varabyte.kobweb.site.components.style.MutedSpanTextVariant
 import com.varabyte.kobweb.site.components.style.SiteTextSize
 import com.varabyte.kobweb.site.components.style.siteText
 import com.varabyte.kobweb.site.components.widgets.GradientBox
-import com.varabyte.kobweb.site.components.widgets.code.CodeBlock
 import com.varabyte.kobweb.site.components.widgets.LinkButton
 import com.varabyte.kobweb.site.components.widgets.Section
+import com.varabyte.kobweb.site.components.widgets.code.CodeBlock
 import kotlinx.browser.window
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.em
@@ -46,12 +46,12 @@ private val LIGHT_BACKGROUND = DARK_BACKGROUND.inverted()
 private fun HeroExample(modifier: Modifier) {
     // For the example, we create our own local mode divorced from the site-wide value
     var localColorMode by remember { mutableStateOf(ColorMode.LIGHT) }
-    val background = if (localColorMode.isLight()) LIGHT_BACKGROUND else DARK_BACKGROUND
-    val foreground = if (localColorMode.isLight()) Colors.Black else Colors.White
+    val background = if (localColorMode.isLight) LIGHT_BACKGROUND else DARK_BACKGROUND
+    val foreground = if (localColorMode.isLight) Colors.Black else Colors.White
 
     LaunchedEffect(Unit) {
         window.setInterval({
-            localColorMode = localColorMode.opposite()
+            localColorMode = localColorMode.opposite
         }, timeout = 5000)
     }
 
@@ -60,7 +60,7 @@ private fun HeroExample(modifier: Modifier) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Row(Modifier.align(Alignment.End)) {
-            if (localColorMode.isLight()) FaMoon() else FaSun()
+            if (localColorMode.isLight) FaMoon() else FaSun()
         }
         // We have to slightly tweak header settings here from the actual code sample above since
         // the overall site overloads H1 values from the default

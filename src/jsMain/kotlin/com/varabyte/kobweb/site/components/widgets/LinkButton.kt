@@ -46,7 +46,7 @@ val PrimaryButtonVariant by ButtonStyle.addVariant {
 }
 
 val NormalButtonVariant by ButtonStyle.addVariant {
-    val colorMode = colorMode.opposite()
+    val colorMode = colorMode.opposite
     base {
         Modifier
             .backgroundColor(SilkTheme.palettes[colorMode].background)

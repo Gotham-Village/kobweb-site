@@ -11,7 +11,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
 import com.varabyte.kobweb.compose.ui.modifiers.gridRow
 import com.varabyte.kobweb.compose.ui.modifiers.gridTemplateRows
 import com.varabyte.kobweb.core.rememberPageContext
-import com.varabyte.kobweb.silk.theme.colors.rememberColorMode
+import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import com.varabyte.kobweb.site.components.sections.Footer
 import com.varabyte.kobweb.site.components.sections.NavHeader
 import kotlinx.browser.document
@@ -29,7 +29,7 @@ fun PageLayout(title: String, content: @Composable () -> Unit) {
         js("hljs.highlightAll()")
     }
 
-    val colorMode by rememberColorMode()
+    val colorMode by ColorMode.currentState
     LaunchedEffect(colorMode) {
         var styleElement = document.querySelector("""link[title="hljs-style"]""")
         if (styleElement == null) {

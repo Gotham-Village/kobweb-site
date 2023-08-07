@@ -17,7 +17,6 @@ import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.style.*
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
-import com.varabyte.kobweb.silk.theme.colors.rememberColorMode
 import com.varabyte.kobweb.site.components.style.MutedSpanTextVariant
 import com.varabyte.kobweb.site.components.style.SiteTextSize
 import com.varabyte.kobweb.site.components.style.boxShadow
@@ -43,14 +42,15 @@ val FeatureItemStyle by ComponentStyle.base {
 
 @Composable
 private fun FeatureItem(feature: Feature) {
-    val colorMode by rememberColorMode()
+    val colorMode by ColorMode.currentState
 
-    Box (
-        FeatureItemStyle.toModifier().then(Modifier
-            .borderRadius(12.px)
-            .background(colorMode)
-            .padding(2.em)
-            .boxShadow(colorMode)
+    Box(
+        FeatureItemStyle.toModifier().then(
+            Modifier
+                .borderRadius(12.px)
+                .background(colorMode)
+                .padding(2.em)
+                .boxShadow(colorMode)
         )
     ) {
         Column {
