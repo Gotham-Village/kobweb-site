@@ -55,7 +55,7 @@ fun ListingSideBar() {
                     .onClick { selectedCategory = category })
         }
         Hr(Modifier.fillMaxWidth().toAttrs())
-        Column(Modifier.overflowY(Overflow.Auto)) {
+        Column(Modifier.overflow { y(Overflow.Auto) }) {
             selectedCategory.subcategories.forEach { subcategory ->
                 if (subcategory.title.isNotEmpty()) {
                     SpanText(subcategory.title.uppercase(), ListingStyle.toModifier(ListingSubcategoryVariant))

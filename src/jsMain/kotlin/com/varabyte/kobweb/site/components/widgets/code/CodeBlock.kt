@@ -25,7 +25,7 @@ val CodeBlockStyle by ComponentStyle {
         Modifier
             .maxWidth(90.vw).fillMaxWidth()
             .borderRadius(10.px)
-            .overflowX(Overflow.Auto)
+            .overflow { x(Overflow.Auto) }
             .siteText(SiteTextSize.SMALL)
     }
     Breakpoint.MD { Modifier.maxWidth(100.percent) }
